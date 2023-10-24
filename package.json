@@ -19,9 +19,11 @@
   "dependencies": {
     "@mantine/core": "7.1.5",
     "@mantine/hooks": "7.1.5",
+    "@tabler/icons-react": "^2.39.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.11.2",
+    "react-tsparticles": "^2.12.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.18",

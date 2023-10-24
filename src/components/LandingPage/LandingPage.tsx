@@ -12,26 +12,26 @@ export function LandingPage() {
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          Automated AI{' '}
+          Hola Amigos!{' '}
           <Text component="span" className={classes.highlight} inherit>
-            code reviews
+            Welcome
           </Text>{' '}
-          for any stack
+          to my website
         </Title>
 
         <Container p={0} size={600}>
           <Text size="lg" c="dimmed" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained to detect lazy
-            developers who do nothing and just complain on Twitter.
+            This is my personal portfolio website designed as a part of showcasing my journey till
+            now.
           </Text>
         </Container>
 
         <div className={classes.controls}>
           <Button className={classes.control} size="lg" variant="default" color="gray">
-            Book a demo
+            Projects
           </Button>
           <Button className={classes.control} size="lg">
-            Purchase a license
+            Timeline
           </Button>
         </div>
       </div>
