@@ -19,47 +19,54 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {
-  IconNotification,
-  IconCode,
-  IconBook,
-  IconChartPie3,
-  IconFingerprint,
-  IconCoin,
   IconChevronDown,
+  IconLink,
+  IconSchool,
+  IconDatabase,
+  IconWifi,
+  IconRobot,
+  IconExposure,
 } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const mockdata = [
   {
-    icon: IconCode,
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
+    icon: IconLink,
+    title: 'Linker',
+    description: 'Link Shortner Web App with Link Analytics and User authentication.',
+    link: 'https://github.com/anshgoyalevil/Linker',
   },
   {
-    icon: IconCoin,
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
+    icon: IconSchool,
+    title: 'LeCours',
+    description: 'E-Learning Web App with Live Chat and Deep Learning',
+    link: 'https://github.com/anshgoyalevil/lecours-e-learning-webapp',
   },
   {
-    icon: IconBook,
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
+    icon: IconDatabase,
+    title: 'CodifyPlus CRM',
+    description: 'Fully featured CRM for personal brand managemenet',
+    link: 'https://github.com/anshgoyalevil/CodifyPlusCRM',
   },
   {
-    icon: IconFingerprint,
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
+    icon: IconWifi,
+    title: 'wifiGOD',
+    description: 'Bash script to clear and renew DNS Cache',
+    link: 'https://github.com/anshgoyalevil/wifiGOD',
   },
   {
-    icon: IconChartPie3,
-    title: 'Analytics',
-    description: 'This Pokémon uses its flying ability to quickly chase',
+    icon: IconExposure,
+    title: 'Experience',
+    description: 'An overview of my Open-Source Experience',
+    link: 'https://github.com/anshgoyalevil/Experience',
   },
   {
-    icon: IconNotification,
-    title: 'Notifications',
-    description: 'Combusken battles with the intensely hot flames it spews',
+    icon: IconRobot,
+    title: 'TreeGPT',
+    description: 'A GitHub File Tree Generator for GPT-3 and 4 Model',
+    link: 'https://github.com/anshgoyalevil/TreeGPT',
   },
 ];
 
@@ -69,7 +76,13 @@ export function Header() {
   const theme = useMantineTheme();
 
   const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+    <UnstyledButton
+      component={Link}
+      target="_blank"
+      to={item.link}
+      className={classes.subLink}
+      key={item.title}
+    >
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} />
@@ -90,9 +103,7 @@ export function Header() {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Text>
-            Ansh Goyal
-          </Text>
+          <Text>Ansh Goyal</Text>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
@@ -115,7 +126,7 @@ export function Header() {
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
-                  <Text fw={500}>Features</Text>
+                  <Text fw={500}>Projects</Text>
                   <Anchor href="#" fz="xs">
                     View all
                   </Anchor>
@@ -131,22 +142,26 @@ export function Header() {
                   <Group justify="space-between">
                     <div>
                       <Text fw={500} fz="sm">
-                        Get started
+                        Visit GitHub
                       </Text>
                       <Text size="xs" c="dimmed">
-                        Their food sources have decreased, and their numbers
+                        50+ projects to solve some day-to-day life chores and problems
                       </Text>
                     </div>
-                    <Button variant="default">Get started</Button>
+                    <Button
+                      target="_blank"
+                      component={Link}
+                      to="https://github.com/anshgoyalevil?tab=repositories"
+                      variant="default"
+                    >
+                      Visit GitHub
+                    </Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
             <a href="#" className={classes.link}>
-              Learn
-            </a>
-            <a href="#" className={classes.link}>
-              Academy
+              Timeline
             </a>
           </Group>
 
@@ -186,10 +201,7 @@ export function Header() {
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
           <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
+            Timeline
           </a>
 
           <Divider my="sm" />
