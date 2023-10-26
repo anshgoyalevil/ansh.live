@@ -1,70 +1,93 @@
-import { Grid, Container, Timeline, Text, Center, Paper } from '@mantine/core';
+import { Grid, Container, Timeline, Text, Center, Paper, Button } from '@mantine/core';
 import {
-  IconGitBranch,
-  IconGitCommit,
-  IconGitPullRequest,
-  IconMessageDots,
+  IconDeviceLaptop,
+  IconGoGame,
+  IconLink,
+  IconShoppingBag,
+  IconSkull,
 } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 import classes from './TimelinePage.module.css';
 
 export function TimelinePage() {
   return (
-    <Container my="md" mt={100}>
+    <Container my="md" mt={60}>
+      <Center>
+        <Text
+          mr={2}
+          ta="center"
+          mb={40}
+          size="xl"
+          fw={900}
+          variant="gradient"
+          gradient={{ from: 'orange', to: 'grape', deg: 221 }}
+        >
+          My Journey in Reverse Chronological Order
+        </Text>
+      </Center>
       <Center>
         <Grid>
           <Grid.Col span={{ base: 12, xs: 12 }}>
             <Paper className={classes.glass_effect} shadow="xl" radius="md" p="xl">
-              <Timeline radius="md" active={1} bulletSize={24} lineWidth={4} reverseActive>
-                <Timeline.Item bullet={<IconGitBranch size={12} />} title="New branch">
+              <Timeline radius="md" active={4} bulletSize={24} lineWidth={4} reverseActive>
+                <Timeline.Item
+                  bullet={<IconGoGame size={12} />}
+                  title="Started Game Development with Unity"
+                  lineVariant="dashed"
+                >
                   <Text c="dimmed" size="sm">
-                    You&apos;ve created new branch{' '}
-                    <Text variant="link" component="span" inherit>
-                      fix-notifications
-                    </Text>{' '}
-                    from master
+                    Started developing some cool 3d games with Unity <br /> Game Development Engine
+                  </Text>
+                  <Text c="dimmed" size="sm">
+                    <Center inline>
+                      Wanna try one?&nbsp;&nbsp;{' '}
+                      <Button
+                        size="compact-xs"
+                        variant="light"
+                        component={Link}
+                        rightSection={<IconLink size={15} />}
+                        target="_blank"
+                        to="https://drive.google.com/file/d/1FjlCDEO6BbbN_Kmz3l38BYXaHSCIq1Xz/view?usp=sharing"
+                      >
+                        Download
+                      </Button>
+                    </Center>
                   </Text>
                   <Text size="xs" mt={4}>
-                    2 hours ago
-                  </Text>
-                </Timeline.Item>
-
-                <Timeline.Item bullet={<IconGitCommit size={12} />} title="Commits">
-                  <Text c="dimmed" size="sm">
-                    You&apos;ve pushed 23 commits to
-                    <Text variant="link" component="span" inherit>
-                      fix-notifications branch
-                    </Text>
-                  </Text>
-                  <Text size="xs" mt={4}>
-                    52 minutes ago
+                    2017 (Grade 8)
                   </Text>
                 </Timeline.Item>
 
                 <Timeline.Item
-                  title="Pull request"
-                  bullet={<IconGitPullRequest size={12} />}
+                  bullet={<IconShoppingBag size={12} />}
+                  title="Started an eCommerce Store"
                   lineVariant="dashed"
                 >
                   <Text c="dimmed" size="sm">
-                    You&apos;ve submitted a pull request
-                    <Text variant="link" component="span" inherit>
-                      Fix incorrect notification message (#187)
-                    </Text>
+                    Started an eCommerce Store with WordPress and <br />
+                    WooCommerce
                   </Text>
                   <Text size="xs" mt={4}>
-                    34 minutes ago
+                    2017 (Grade 7)
                   </Text>
                 </Timeline.Item>
 
-                <Timeline.Item title="Code review" bullet={<IconMessageDots size={12} />}>
-                  <Text c="dimmed" size="sm">
-                    <Text variant="link" component="span" inherit>
-                      Robert Gluesticker
-                    </Text>{' '}
-                    left a code review on your pull request
-                  </Text>
+                <Timeline.Item
+                  title="Started Learning Ethical Hacking"
+                  bullet={<IconSkull size={12} />}
+                  lineVariant="dashed"
+                >
                   <Text size="xs" mt={4}>
-                    12 minutes ago
+                    2014 (Grade 5)
+                  </Text>
+                </Timeline.Item>
+
+                <Timeline.Item
+                  title="Started with a Computer"
+                  bullet={<IconDeviceLaptop size={12} />}
+                >
+                  <Text size="xs" mt={4}>
+                    2010 (Grade 1)
                   </Text>
                 </Timeline.Item>
               </Timeline>

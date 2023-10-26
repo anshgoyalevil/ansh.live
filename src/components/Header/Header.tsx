@@ -102,7 +102,7 @@ export function Header() {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Text>Ansh Goyal</Text>
+          <Text component={Link} to="/">Ansh&apos;s Portfolio</Text>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link to="/" className={classes.link}>
@@ -180,7 +180,7 @@ export function Header() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <Link to="/" className={classes.link}>
+          <Link onClick={closeDrawer} to="/" className={classes.link}>
             Home
           </Link>
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
@@ -195,7 +195,7 @@ export function Header() {
             </Center>
           </UnstyledButton>
           <Collapse pl={15} pr={15} in={linksOpened}>{links}</Collapse>
-          <Link to="/timeline" className={classes.link}>
+          <Link to="/timeline" onClick={closeDrawer} className={classes.link}>
             Timeline
           </Link>
 
