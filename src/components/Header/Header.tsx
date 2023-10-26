@@ -105,9 +105,9 @@ export function Header() {
           <Text>Ansh Goyal</Text>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <Link to="/" className={classes.link}>
               Home
-            </a>
+            </Link>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
@@ -159,9 +159,9 @@ export function Header() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
+            <Link to="/timeline" className={classes.link}>
               Timeline
-            </a>
+            </Link>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -180,9 +180,9 @@ export function Header() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="#" className={classes.link}>
+          <Link to="/" className={classes.link}>
             Home
-          </a>
+          </Link>
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
@@ -195,9 +195,9 @@ export function Header() {
             </Center>
           </UnstyledButton>
           <Collapse pl={15} pr={15} in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
+          <Link to="/timeline" className={classes.link}>
             Timeline
-          </a>
+          </Link>
 
           <Divider my="sm" />
         </ScrollArea>
