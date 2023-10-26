@@ -1,4 +1,4 @@
-import { Grid, Container, Timeline, Text, Center, Paper, ActionIcon, Button } from '@mantine/core';
+import { Grid, Container, Timeline, Text, Center, Paper, Button } from '@mantine/core';
 import {
   IconDeviceLaptop,
   IconGoGame,
@@ -6,8 +6,8 @@ import {
   IconShoppingBag,
   IconSkull,
 } from '@tabler/icons-react';
-import classes from './TimelinePage.module.css';
 import { Link } from 'react-router-dom';
+import classes from './TimelinePage.module.css';
 
 export function TimelinePage() {
   return (
