@@ -3,7 +3,7 @@ import './Fireflies.css';
 
 function Fireflies() {
   return (
-    <div>
+    <div className="day-time">
       <div className="firefly" />
       <div className="firefly" />
       <div className="firefly" />

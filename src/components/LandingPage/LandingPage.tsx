@@ -1,14 +1,9 @@
 import { Title, Text, Button, Container } from '@mantine/core';
-import { Dots } from './Dots';
 import classes from './LandingPage.module.css';
 
 export function LandingPage() {
   return (
     <Container className={classes.wrapper} size={1400}>
-      <Dots className={classes.dots} style={{ left: 0, top: 0 }} />
-      <Dots className={classes.dots} style={{ left: 60, top: 0 }} />
-      <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
-      <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
 
       <div className={classes.inner}>
         <Title className={classes.title}>

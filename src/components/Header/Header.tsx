@@ -29,7 +29,6 @@ import {
 } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
-import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const mockdata = [
   {
@@ -165,10 +164,6 @@ export function Header() {
             </a>
           </Group>
 
-          <Group visibleFrom="sm">
-            <ColorSchemeToggle />
-          </Group>
-
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
@@ -199,16 +194,12 @@ export function Header() {
               />
             </Center>
           </UnstyledButton>
-          <Collapse in={linksOpened}>{links}</Collapse>
+          <Collapse pl={15} pr={15} in={linksOpened}>{links}</Collapse>
           <a href="#" className={classes.link}>
             Timeline
           </a>
 
           <Divider my="sm" />
-
-          <Group justify="center" pb="xl" px="md">
-            <ColorSchemeToggle />
-          </Group>
         </ScrollArea>
       </Drawer>
     </Box>

@@ -2,6 +2,7 @@ html, body {
     height: 100%; }
   
   body {
+    background: url(https://www.digitaldesignjournal.com/wp-content/uploads/2020/01/free-css-particle-backgrounds-1.png);
     background-size: cover; }
   
   .firefly {
