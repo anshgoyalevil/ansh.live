@@ -41,3 +41,9 @@
       text-align: left;
     }
   }
+
+  .glass_effect {
+    background-color: rgba(140, 140, 140, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
