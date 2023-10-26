@@ -4,7 +4,6 @@ import classes from './LandingPage.module.css';
 export function LandingPage() {
   return (
     <Container className={classes.wrapper} size={1400}>
-
       <div className={classes.inner}>
         <Title className={classes.title}>
           Hola Amigos!{' '}
