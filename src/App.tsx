@@ -5,6 +5,7 @@ import { theme } from './theme';
 import { Header } from './components/Header/Header';
 import Fireflies from './components/Fireflies/Fireflies';
 import { HomePage } from './pages/Home.page';
+import { Timeline } from './pages/Timeline.page';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route index element={<HomePage />} />
+          <Route path="/timeline" element={<Timeline />} />
         </Routes>
       </BrowserRouter>
     </MantineProvider>
