@@ -26,7 +26,7 @@ export function OpenSourceStats() {
     const Icon = icons[stat.icon];
 
     return (
-      <Paper withBorder p="md" radius="md" key={stat.title}>
+      <Paper className={classes.glass_effect} withBorder p="md" radius="md" key={stat.title}>
         <Group justify="space-between">
           <Text size="xs" c="dimmed" className={classes.title}>
             {stat.title}
