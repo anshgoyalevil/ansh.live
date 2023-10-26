@@ -6,6 +6,7 @@ import { Header } from './components/Header/Header';
 import Fireflies from './components/Fireflies/Fireflies';
 import { HomePage } from './pages/Home.page';
 import { Timeline } from './pages/Timeline.page';
+import { Footer } from './components/Footer/Footer';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/timeline" element={<Timeline />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </MantineProvider>
   );
 }

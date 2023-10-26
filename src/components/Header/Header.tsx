@@ -102,7 +102,7 @@ export function Header() {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Text>Ansh Goyal</Text>
+          <Text>Ansh&apos;s Portfolio</Text>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link to="/" className={classes.link}>
