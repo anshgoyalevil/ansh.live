@@ -17,7 +17,6 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@clickvote/react": "^0.0.8",
     "@mantine/core": "7.1.5",
     "@mantine/hooks": "7.1.5",
     "@tabler/icons-react": "^2.39.0",
